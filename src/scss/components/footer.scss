@@ -104,11 +104,14 @@
       flex-wrap: wrap;
       gap: #{rem(59)};
 
+      @include tablet {
+        gap: Min(Max(#{rem(40)}, 3vw), #{rem(60)});
+      }
+
       @include mobile {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
-        gap: Min(Max(#{rem(40)}, 3vw), #{rem(60)});
       }
 
       &_item {
