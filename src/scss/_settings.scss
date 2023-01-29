@@ -10,15 +10,16 @@ html {
 
 .page {
   height: 100%;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-inter, sans-serif);
   -webkit-text-size-adjust: 100%;
 }
 
 .page__body {
   margin: 0;
-  min-width: 320px;
+  min-width: 300px;
   min-height: 100%;
-  font-size: 16px;
+  font-size: #{rem(16)};
+  background: var(--white-color);
 }
 
 img {
@@ -32,7 +33,12 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  overflow: hidden; // если на сайте position: sticky - убрать эту настройку
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .is-hidden {
@@ -57,7 +63,7 @@ a {
   appearance: none;
   border: none;
   border-radius: 0;
-  background-color: #fff;
+  background-color: var(--white-color);
 
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,

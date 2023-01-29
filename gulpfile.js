@@ -203,12 +203,12 @@ const watchFiles = () => {
       baseDir: `${buildFolder}`
     },
   });
-
   watch(paths.srcScss, styles);
   watch(paths.srcFullJs, scripts);
   watch(`${paths.srcPartialsFolder}/*.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
+  watch(`${paths.srcPartialsFolder}/**/**`, htmlPartials);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
   // watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
   // watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);

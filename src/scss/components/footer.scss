@@ -1,0 +1,145 @@
+@import "../mixins";
+@import "../functions";
+
+.footer {
+  margin-top: 70vh;
+  width: 100%;
+  background: var(--light-gray-color);
+
+  @include mobile {
+    margin-bottom: #{rem(48)};
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: #{rem(76)};
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #838383;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: #{rem(57)};
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--dark-color);
+    }
+  }
+
+  &__container {
+    padding-top: #{rem(25)};
+    padding-bottom:  #{rem(61)};
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: #{rem(23)} 1fr;
+    row-gap: #{rem(20)};
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-rows: #{rem(76)} 1fr #{rem(57)};
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    grid-row: 1/1;
+    grid-column: 1/2;
+    font-family: var(--font-neue);
+    font-style: normal;
+    font-weight: 700;
+    font-size: #{rem(24)};
+    line-height: #{rem(23)};
+    color: var(--dark-color);
+
+    @include mobile {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+
+  &__timestamp {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-family: var(--font-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: #{rem(12)};
+    line-height: #{rem(15)};
+    color: var(--dark-color);
+
+    @include mobile {
+      grid-row: 3/4;
+      text-align: center;
+      color: var(--black-color);
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: flex-end;
+    grid-row: 1/3;
+    grid-column: 2/3;
+
+    @include mobile {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: #{rem(59)};
+
+      @include mobile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: Min(Max(#{rem(40)}, 3vw), #{rem(60)});
+      }
+
+      &_item {
+        a {
+          font-family: var(--font-inter);
+          font-style: normal;
+          font-weight: 400;
+          font-size: #{rem(16)};
+          line-height: #{rem(19)};
+          letter-spacing: -0.019em;
+          color: var(--dark-color);
+          cursor: pointer;
+        }
+
+        & ul {
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+
+          & li a {
+            font-family: var(--font-inter);
+            font-style: normal;
+            font-weight: 400;
+            font-size: #{rem(12)};
+            line-height: #{rem(15)};
+            letter-spacing: -0.019em;
+            color: rgba(30, 30, 30, 0.6);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

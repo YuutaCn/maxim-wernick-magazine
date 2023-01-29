@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
-	<title><!--#echo var="TITLE" --></title>
-	<meta name="description" content="<!--#echo var="DESCRIPTION" -->">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><!--#echo var="TITLE" --></title>
+  <meta name="description" content="<!--#echo var=" DESCRIPTION" -->">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/components/header.css">
+  <link rel="stylesheet" href="/css/components/footer.css">
+  <script defer src="/js/main.js"></script>
 </head>
 
-<body>
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+      <div class="header__container container">
 
-<header>
-	header
-</header>
+        <div class="header__btns">
 
-<main>
+          <button class="header__burger burger btn-reset">
+            <img class="burger__icon" src="/img/svg/burger.svg" alt="кнопка меню" width="24" height="20">
+          </button>
+
+          <form class="header__search search" action="#" onsubmit="event.preventDefault();">
+            <button class="search__btn btn-reset">
+              <img class="search__btn-icon" src="/img/svg/search.svg" alt="картинка поиска" width="20" height="20">
+            </button>
+            <input class="search__input" name="Поиск" type="text">
+            <ul class="search__result list-reset">
+              <li class="search__result-item"><a>Paris</a></li>
+              <li class="search__result-item"><a>Paris France</a></li>
+              <li class="search__result-item"><a>Paris</a></li>
+              <li class="search__result-item"><a>Paris France</a></li>
+              <li class="search__result-item"><a>Paris</a></li>
+              <li class="search__result-item"><a>Paris France</a></li>
+              <li class="search__result-item"><a>Paris</a></li>
+            </ul>
+          </form> <!-- /header__search -->
+
+        </div> <!-- /header__btns -->
+
+        <h1 class="header__title">Журнал Макса Верника</h1>
+
+        <span class="header__timestamp">Вторник, Январь 3, 2023</span>
+
+      </div> <!-- /header__container -->
+
+    </header>
+
+    <nav class="nav">
+      <ul class="nav__list list-reset">
+        <li class="nav__list-item"><a href="#">Путешествия</a></li>
+        <li class="nav__list-item"><a href="#">Обзоры</a></li>
+        <li class="nav__list-item"><a href="#">Видео</a></li>
+        <li class="nav__list-item"><a href="#">Мнения</a></li>
+        <li class="nav__list-item"><a href="#">Советы</a></li>
+      </ul>
+    </nav> <!-- /nav -->
+
+    <main>
