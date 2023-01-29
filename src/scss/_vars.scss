@@ -1,26 +1,33 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
-  --container-offset: 125px;
+  --font-neue: "Neue Machina", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-nova: "Proxima Nova", sans-serif;
+  --content-width: #{rem(1170)};
+  --container-offset: #{rem(135)};
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   @media (min-width: (1024px)) and (max-width: (1439px)) {
-    --content-width: 994px;
-    --container-offset: 15px;
+    --container-offset: #{rem(15)};
   }
 
   @media (min-width: (768px)) and (max-width: (1023px)) {
-    --content-width: 900px;
-    --container-offset: 15px;
+    --container-offset: #{rem(15)};
   }
 
   @media (min-width: (320px)) and (max-width: (767px)) {
-    --content-width: 500px;
-    --container-offset: 10px;
+    --container-offset: #{rem(10)};
   }
 
   // colors
-  --light-color: #fff;
+  --white-color: #fff;
+  --light-color: #F5F5F5;
+  --light-gray-color: #D9D9D9;
+  --gray-color: #BCBDBF;
+  --light-dark-color: #454545;
+  --dark-color: #313131;
+
+  // cubic
+  --def-cub: cubic-bezier(.62,.33,.53,.89);
 }
