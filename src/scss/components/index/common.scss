@@ -430,7 +430,7 @@
       padding-right: #{rem(30)};
       margin-top: #{rem(25)};
       width: 100%;
-      display: grid;
+      display: none;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr;
       gap: #{rem(20)};
@@ -490,6 +490,10 @@
           line-height: #{rem(12)};
           letter-spacing: -0.019em;
         }
+      }
+
+      &_active {
+        display: grid;
       }
     }
 
