@@ -97,6 +97,8 @@
   }
 
   & .result {
+    position: relative;
+    z-index: 4;
     display: none;
 
     &.result_active {
@@ -183,7 +185,7 @@
   height: 100%;
   padding-top: #{rem(10)};
   padding-bottom: #{rem(15)};
-  border-bottom: solid 1px var(--dark-color);
+  border-bottom: solid 1px var(--dark-color-60);
 
   &__list {
     width: 100%;
@@ -216,6 +218,7 @@
 
       &:hover,
       &:focus {
+        outline: none;
         color: var(--secondary-color);
         background-size: 100% 1px;
       }
