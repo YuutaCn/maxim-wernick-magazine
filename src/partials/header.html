@@ -7,10 +7,12 @@
   <title><!--#echo var="TITLE" --></title>
   <meta name="description" content="<!--#echo var=" DESCRIPTION" -->">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/components/header.css">
-  <link rel="stylesheet" href="/css/components/footer.css">
-  <script defer src="/js/main.js"></script>
+  <link rel="stylesheet" href="/css/vendor.min.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/components/header.min.css">
+  <link rel="stylesheet" href="/css/components/footer.min.css">
+  <script defer src="/js/main.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body class="page__body">
@@ -18,31 +20,34 @@
     <header class="header">
       <div class="header__container container">
 
-        <div class="header__btns">
+        <div class="header__buttons">
 
-          <button class="header__burger burger btn-reset">
-            <img class="burger__icon" src="/img/svg/burger.svg" alt="кнопка меню" width="24" height="20">
+          <button class="header__burger burger button">
+            <img class="button__icon" src="/img/svg/burger.svg" alt="кнопка меню" width="24" height="20">
           </button>
 
           <form class="header__search search" action="#" onsubmit="event.preventDefault();">
-            <button class="search__btn btn-reset">
-              <img class="search__btn-icon" src="/img/svg/search.svg" alt="картинка поиска" width="20" height="20">
+            <button class="search__button button">
+              <img class="button__icon" src="/img/svg/search.svg" alt="картинка поиска" width="20" height="20">
             </button>
-            <input class="search__input" name="Поиск" type="text">
-            <ul class="search__result list-reset">
-              <li class="search__result-item"><a>Paris</a></li>
-              <li class="search__result-item"><a>Paris France</a></li>
-              <li class="search__result-item"><a>Paris</a></li>
-              <li class="search__result-item"><a>Paris France</a></li>
-              <li class="search__result-item"><a>Paris</a></li>
-              <li class="search__result-item"><a>Paris France</a></li>
-              <li class="search__result-item"><a>Paris</a></li>
+            <input class="search__input input" name="Поиск" type="text">
+            <ul class="search__result result list">
+              <li class="result__item"><a href="#">Paris</a></li>
+              <li class="result__item"><a href="#">Paris France</a></li>
+              <li class="result__item"><a href="#">Paris</a></li>
+              <li class="result__item"><a href="#">Paris France</a></li>
+              <li class="result__item"><a href="#">Paris</a></li>
+              <li class="result__item"><a href="#">Paris France</a></li>
             </ul>
           </form> <!-- /header__search -->
 
-        </div> <!-- /header__btns -->
+        </div> <!-- /header__buttons -->
 
-        <h1 class="header__title">Журнал Макса Верника</h1>
+        <h1 class="header__title">
+          <a href="/">
+            Журнал Макса Верника
+          </a>
+        </h1>
 
         <span class="header__timestamp">Вторник, Январь 3, 2023</span>
 
@@ -51,12 +56,12 @@
     </header>
 
     <nav class="nav">
-      <ul class="nav__list list-reset">
-        <li class="nav__list-item"><a href="#">Путешествия</a></li>
-        <li class="nav__list-item"><a href="#">Обзоры</a></li>
-        <li class="nav__list-item"><a href="#">Видео</a></li>
-        <li class="nav__list-item"><a href="#">Мнения</a></li>
-        <li class="nav__list-item"><a href="#">Советы</a></li>
+      <ul class="nav__list list">
+        <li class="nav__item"><a href="#">Путешествия</a></li>
+        <li class="nav__item"><a href="#">Обзоры</a></li>
+        <li class="nav__item"><a href="#">Видео</a></li>
+        <li class="nav__item"><a href="#">Мнения</a></li>
+        <li class="nav__item"><a href="#">Советы</a></li>
       </ul>
     </nav> <!-- /nav -->
 

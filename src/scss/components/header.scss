@@ -20,7 +20,7 @@
     background: var(--white-color);
   }
 
-  &__btns {
+  &__buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -51,7 +51,7 @@
     display: flex;
     align-items: center;
 
-    &__btn {
+    & .button {
       width: #{rem(20)};
       height: #{rem(20)};
 
@@ -62,7 +62,7 @@
       }
     }
 
-    &.active {
+    &.search_active {
       width: #{rem(300)};
       padding-left: #{rem(10)};
       padding-right: #{rem(20)};
@@ -96,10 +96,12 @@
     display: none;
   }
 
-  &__result {
+  & .result {
+    position: relative;
+    z-index: 4;
     display: none;
 
-    &.active {
+    &.result_active {
       position: absolute;
       top: #{rem(40)};
       left: #{rem(-1)};
@@ -113,7 +115,7 @@
       gap: #{rem(5)};
     }
 
-    &-item {
+    &__item {
 
       a {
         font-family: var(--font-inter);
@@ -122,7 +124,21 @@
         font-size: #{rem(16)};
         line-height: #{rem(20)};
         letter-spacing: -0.019em;
+        color: var(--dark-color);
         cursor: pointer;
+
+        background-image: linear-gradient(var(--dark-color), var(--dark-color));
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: background-size .25s var(--cubic-bezier),
+          background .15s var(--cubic-bezier);
+
+        &:hover,
+        &:focus {
+          color: var(--secondary-color);
+          background-size: 100% 1px;
+        }
       }
     }
   }
@@ -142,6 +158,11 @@
   line-height: Min(Max(#{rem(15)}, 2.22vw), #{rem(17)});
   text-align: center;
   color: var(--dark-color);
+
+  & a {
+    cursor: pointer;
+    color: var(--dark-color);
+  }
 }
 
 &__timestamp {
@@ -164,7 +185,7 @@
   height: 100%;
   padding-top: #{rem(10)};
   padding-bottom: #{rem(15)};
-  border-bottom: solid 1px var(--dark-color);
+  border-bottom: solid 1px var(--dark-color-60);
 
   &__list {
     width: 100%;
@@ -174,18 +195,32 @@
     align-items: center;
     gap: Min(Max(#{rem(22)}, 2.8vw), #{rem(40)});
 
-    &-item {
-      font-family: var(--font-inter);
-      font-style: normal;
-      font-weight: 400;
-      font-size: #{rem(12)};
-      line-height: #{rem(15)};
-      text-align: center;
-      letter-spacing: -0.019em;
+  }
+  &__item {
+    font-family: var(--font-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: #{rem(12)};
+    line-height: #{rem(15)};
+    text-align: center;
+    letter-spacing: -0.019em;
 
-      & a {
-        color: var(--dark-color);
-        cursor: pointer;
+    & a {
+      color: var(--dark-color);
+      cursor: pointer;
+
+      background-image: linear-gradient(var(--dark-color), var(--dark-color));
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 1px;
+      transition: background-size .25s var(--cubic-bezier),
+        background .15s var(--cubic-bezier);
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: var(--secondary-color);
+        background-size: 100% 1px;
       }
     }
   }
