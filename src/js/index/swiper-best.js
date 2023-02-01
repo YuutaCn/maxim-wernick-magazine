@@ -11,9 +11,21 @@ new Swiper('.best__swiper', {
   autoplay: {
     delay: 3000,
   },
-  spaceBetween: 20,
+  breakpoints: {
+    1440: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    },
+  },
   loop: true,
   preventClicks: true,
-  slidesPerView: 1,
   speed: 400
 });

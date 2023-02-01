@@ -8,15 +8,15 @@
   --container-offset: #{rem(135)};
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
-  @media (min-width: (1024px)) and (max-width: (1439px)) {
+  @media (min-width: (#{rem(1024)})) and (max-width: (#{rem(1439)})) {
     --container-offset: #{rem(15)};
   }
 
-  @media (min-width: (768px)) and (max-width: (1023px)) {
+  @media (min-width: (#{rem(768)})) and (max-width: (#{rem(1023)})) {
     --container-offset: #{rem(15)};
   }
 
-  @media (min-width: (320px)) and (max-width: (767px)) {
+  @media (min-width: (#{rem(320)})) and (max-width: (#{rem(767)})) {
     --container-offset: #{rem(10)};
   }
 
@@ -24,6 +24,8 @@
   --white-color: #fff;
   --white-color-80: #ffffffcc;
   --light-color: #F5F5F5;
+  --light-color-30: #f5f5f54d;
+  --light-color-60: #f5f5f599;
   --light-gray-color: #D9D9D9;
   --gray-color: #BCBDBF;
   --light-dark-color: #454545;

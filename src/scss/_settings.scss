@@ -234,6 +234,132 @@ a {
   cursor: pointer;
 }
 
+h1 {
+  font-family: var(--font-neue);
+  font-style: normal;
+  font-weight: 700;
+  font-size: Min(Max(#{rem(16)}, 2.22vw), #{rem(32)});
+  line-height: Min(Max(#{rem(15)}, 2.22vw), #{rem(31)});
+  color: var(--dark-color);
+}
+
+h2 {
+  font-family: var(--font-neue);
+  font-style: normal;
+  font-weight: 700;
+  font-size: #{rem(24)};
+  line-height: #{rem(23)};
+  color: var(--dark-color);
+}
+
+h3 {
+  font-family: var(--font-neue);
+  font-style: normal;
+  font-weight: 700;
+  font-size: Min(Max(#{rem(14)}, 2.22vw), #{rem(16)});
+  line-height: Min(Max(#{rem(14)}, 2.22vw), #{rem(15)});
+  color: var(--dark-color);
+}
+
+h4 {
+  font-family: var(--font-neue);
+  font-style: normal;
+  font-weight: 700;
+  font-size: #{rem(12)};
+  line-height: #{rem(12)};
+  color: var(--dark-color);
+}
+
 .swiper {
-  cursor: grab;
+
+  &-wrapper {
+    cursor: grab;
+  }
+
+  .swiper__navigation {
+    margin-top: #{rem(13)};
+    display: flex;
+    top: #{rem(296)};
+    flex-direction: row;
+    gap: #{rem(10)};
+
+
+    & .swiper-button-next,
+    & .swiper-button-prev {
+      width: #{rem(24)};
+      height: #{rem(24)};
+      border-radius: 50%;
+      border: 1px solid var(--dark-color-40);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background: white;
+      z-index: 3;
+      transition: border .25s var(--cubic-bezier);
+
+      &:hover {
+        border: 1px solid var(--dark-color);
+      }
+
+      &::before {
+        content: '';
+        width: #{rem(7)};
+        height: #{rem(7)};
+        border-top: solid 1px var(--dark-color);
+        border-right: solid 1px var(--dark-color);
+      }
+    }
+
+    & .swiper-button-next {
+
+      &::before {
+        position: relative;
+        right: #{rem(2)};
+        transform: rotate(45deg);
+      }
+    }
+
+    & .swiper-button-prev {
+      margin-left: auto;
+
+      &::before {
+        position: relative;
+        left: #{rem(2)};
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &-pagination {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: #{rem(10)};
+
+    &-bullet {
+      width: #{rem(8)};
+      height: #{rem(8)};
+      background: var(--light-gray-color);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background .25s var(--cubic-bezier);
+
+      &:hover {
+        transform: scale(1.2);
+        background: var(--dark-color-60);
+      }
+
+      &-active {
+        width: #{rem(10)};
+        height: #{rem(10)};
+        background: var(--dark-color-40);
+
+        &:hover {
+          transform: scale(1);
+          background: var(--dark-color-40);
+        }
+      }
+    }
+  }
 }
