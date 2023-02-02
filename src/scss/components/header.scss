@@ -95,7 +95,6 @@
         font-size: #{rem(16)};
         line-height: #{rem(19)};
         letter-spacing: -0.019em;
-        color: var(--dark-color);
       }
     }
   }
@@ -117,35 +116,36 @@
       height: auto;
       display: flex;
       flex-direction: column;
-      padding: #{rem(10)} #{rem(20)} #{rem(10)} #{rem(40)};
+      padding: #{rem(10)} 0;
       background: var(--white-color);
       border: solid 1px var(--dark-color);
-      gap: #{rem(5)};
     }
 
     &__item {
 
       a {
+        display: flex;
+        width: 100%;
         font-family: var(--font-inter);
         font-style: normal;
         font-weight: 400;
         font-size: #{rem(16)};
         line-height: #{rem(20)};
         letter-spacing: -0.019em;
-        color: var(--dark-color);
         cursor: pointer;
+        padding: 2.5px 20px 2.5px 40px;
 
-        background-image: linear-gradient(var(--dark-color), var(--dark-color));
-        background-position: 0% 100%;
+        background-image: linear-gradient(var(--dark-color-20), var(--dark-color-20));
+        background-position: 50% 100%;
         background-repeat: no-repeat;
-        background-size: 0% 1px;
-        transition: background-size .25s var(--cubic-bezier),
-          background .15s var(--cubic-bezier);
+        background-size: 0% 100%;
+        transition: background-size .0s var(--cubic-bezier),
+          background .0s var(--cubic-bezier);
 
         &:hover,
         &:focus {
           color: var(--secondary-color);
-          background-size: 100% 1px;
+          background-size: 100% 100%;
         }
       }
     }
@@ -165,11 +165,9 @@
   font-size: Min(Max(#{rem(16)}, 2.22vw), #{rem(36)});
   line-height: Min(Max(#{rem(15)}, 2.22vw), #{rem(17)});
   text-align: center;
-  color: var(--dark-color);
 
   & a {
     cursor: pointer;
-    color: var(--dark-color);
   }
 }
 
@@ -179,7 +177,6 @@
   font-size: Min(Max(#{rem(12)}, 5.7vw), #{rem(14)});
   line-height: #{rem(17)};
   text-align: end;
-  color: var(--dark-color);
 
   @include mobile {
     display: none;
@@ -208,6 +205,7 @@
     gap: Min(Max(#{rem(22)}, 2.8vw), #{rem(40)});
 
   }
+
   &__item {
     font-family: var(--font-inter);
     font-style: normal;
@@ -218,7 +216,6 @@
     letter-spacing: -0.019em;
 
     & a {
-      color: var(--dark-color);
       cursor: pointer;
 
       background-image: linear-gradient(var(--dark-color), var(--dark-color));

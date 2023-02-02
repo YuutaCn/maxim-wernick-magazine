@@ -8,15 +8,15 @@
   --container-offset: #{rem(135)};
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
-  @media (min-width: (#{rem(1024)})) and (max-width: (#{rem(1439)})) {
+  @media (max-width: (#{rem(1439)})) {
     --container-offset: #{rem(15)};
   }
 
-  @media (min-width: (#{rem(768)})) and (max-width: (#{rem(1023)})) {
+  @media (max-width: (#{rem(1023)})) {
     --container-offset: #{rem(15)};
   }
 
-  @media (min-width: (#{rem(320)})) and (max-width: (#{rem(767)})) {
+  @media (max-width: (#{rem(767)})) {
     --container-offset: #{rem(10)};
   }
 

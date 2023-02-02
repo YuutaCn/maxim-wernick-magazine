@@ -1,0 +1,99 @@
+@import "../mixins";
+
+.reviews {
+  width: 100%;
+  background: var(--white-color);
+  margin-top: #{rem(40)};
+
+  &__container {
+    width: 100%;
+    border-top: solid 1px var(--gray-color);
+    padding-top: #{rem(20)};
+  }
+
+  & .buttons {
+    margin-top: #{rem(20)};
+    display: flex;
+    flex-direction: row;
+    gap: #{rem(20)};
+
+    &__technic,
+    &__restaurants {
+      width: #{rem(200)};
+      height: #{rem(25)};
+
+      &_active {
+        outline: none;
+        color: var(--dark-color);
+        border: solid 1px var(--dark-color);
+        background: transparent;
+        pointer-events: none;
+      }
+    }
+  }
+
+  & .swiper {
+    margin-top: #{rem(20)};
+
+    &__more {
+      margin-right: auto;
+
+      @include mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: #{rem(40)};
+        order: 1;
+      }
+    }
+
+    &__navigation {
+      margin-top: #{rem(30)};
+
+      @include mobile {
+        margin-right: 0;
+        flex-wrap: wrap;
+        row-gap: #{rem(23)};
+        margin-top: #{rem(13)};
+      }
+
+      & .swiper-button-next {
+        margin-right: #{rem(10)};
+      }
+    }
+
+    &-slide {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row;
+      gap: #{rem(20)};
+
+      & .cover {
+        flex-shrink: 0;
+        width: #{rem(170)};
+        height: auto;
+        aspect-ratio: 1/1;
+        justify-content: end;
+      }
+
+      & .text {
+        width: #{rem(160)};
+
+        &__title {
+          margin-bottom: #{rem(15)};
+        }
+
+        &__date,
+        &__description {
+          font-family: var(--font-inter);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 12px;
+          letter-spacing: -0.019em;
+        }
+      }
+    }
+  }
+}

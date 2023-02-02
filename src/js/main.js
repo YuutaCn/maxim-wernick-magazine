@@ -26,12 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
     } else{
       document.querySelector('.header__search').classList.remove('search_active');
       document.querySelector('.search__result').classList.remove('result_active');
+      if (window.screen.availWidth < 1024) {
+        document.querySelector('.header__title').classList.toggle('visually-hidden');
+      };
     }
   });
 
   // Поиск закрываем на "Esc"
   document.addEventListener('keydown', function (e) {
     if (e.keyCode == 27) {
+      if (window.screen.availWidth < 1024) {
+        document.querySelector('.header__title').classList.toggle('visually-hidden');
+      };
       document.querySelector('.header__search').classList.remove('search_active');
       document.querySelector('.search__result').classList.remove('result_active');
     }

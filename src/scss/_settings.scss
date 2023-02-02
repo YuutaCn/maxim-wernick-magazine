@@ -67,7 +67,6 @@ footer {
   line-height: #{rem(15)};
   text-align: center;
   letter-spacing: -0.019em;
-  color: var(--dark-color);
   transition: color .15s var(--cubic-bezier),
     border .15s var(--cubic-bezier),
     background .15s var(--cubic-bezier);
@@ -105,6 +104,7 @@ footer {
   text-align: center;
   letter-spacing: -0.019em;
   color: var(--light-color);
+  padding: #{rem(5)} #{rem(20)};
   transition: color .15s var(--cubic-bezier),
     border .15s var(--cubic-bezier),
     background .15s var(--cubic-bezier);
@@ -202,9 +202,11 @@ li,
 a {
   padding: 0;
   margin: 0;
+  color: var(--dark-color);
 }
 
 a.label {
+  z-index: 1;
   padding: #{rem(2)} #{rem(5)};
   background: var(--white-color);
   border-radius: #{rem(2)};
@@ -214,7 +216,6 @@ a.label {
   font-size: #{rem(10)};
   line-height: #{rem(12)};
   letter-spacing: -0.019em;
-  color: var(--dark-color);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   transition: transform .15s var(--cubic-bezier),
     color .15s var(--cubic-bezier),
@@ -230,7 +231,6 @@ a.label {
 }
 
 a {
-  color: var(--dark-color);
   cursor: pointer;
 }
 
@@ -240,7 +240,6 @@ h1 {
   font-weight: 700;
   font-size: Min(Max(#{rem(16)}, 2.22vw), #{rem(32)});
   line-height: Min(Max(#{rem(15)}, 2.22vw), #{rem(31)});
-  color: var(--dark-color);
 }
 
 h2 {
@@ -249,7 +248,6 @@ h2 {
   font-weight: 700;
   font-size: #{rem(24)};
   line-height: #{rem(23)};
-  color: var(--dark-color);
 }
 
 h3 {
@@ -258,7 +256,6 @@ h3 {
   font-weight: 700;
   font-size: Min(Max(#{rem(14)}, 2.22vw), #{rem(16)});
   line-height: Min(Max(#{rem(14)}, 2.22vw), #{rem(15)});
-  color: var(--dark-color);
 }
 
 h4 {
@@ -267,21 +264,29 @@ h4 {
   font-weight: 700;
   font-size: #{rem(12)};
   line-height: #{rem(12)};
-  color: var(--dark-color);
 }
 
 .swiper {
+  position: relative;
+  overflow: hidden;
 
   &-wrapper {
     cursor: grab;
+    position: relative;
+    display: flex;
+    will-change: transform;
   }
 
-  .swiper__navigation {
+  &__navigation {
     margin-top: #{rem(13)};
     display: flex;
     top: #{rem(296)};
     flex-direction: row;
     gap: #{rem(10)};
+
+    @include mobile {
+      margin-right: #{rem(10)};
+    }
 
 
     & .swiper-button-next,
@@ -362,4 +367,34 @@ h4 {
       }
     }
   }
+}
+
+.card-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+  }
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-end;
+  gap: #{rem(5)};
+  padding: #{rem(10)};
 }
