@@ -5,10 +5,10 @@
   --font-inter: "Inter", sans-serif;
   --font-nova: "Proxima Nova", sans-serif;
   --content-width: #{rem(1170)};
-  --container-offset: #{rem(135)};
+  --container-offset: #{rem(0)};
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
-  @media (max-width: (#{rem(1439)})) {
+  @media (max-width: (#{rem(1200)})) {
     --container-offset: #{rem(15)};
   }
 

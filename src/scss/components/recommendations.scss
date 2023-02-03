@@ -9,6 +9,11 @@
     width: 100%;
     border-top: solid 1px var(--gray-color);
     padding-top: #{rem(20)};
+
+    @include mobile {
+      border-top: none;
+      padding-top: #{rem(10)};
+    }
   }
 
 & .swiper {
@@ -86,8 +91,8 @@
         font-family: var(--font-inter);
         font-style: normal;
         font-weight: 400;
-        font-size: 10px;
-        line-height: 12px;
+        font-size: #{rem(10)};
+        line-height: #{rem(12)};
         letter-spacing: -0.019em;
       }
     }

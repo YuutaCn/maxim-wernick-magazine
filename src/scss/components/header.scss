@@ -204,6 +204,13 @@
     align-items: center;
     gap: Min(Max(#{rem(22)}, 2.8vw), #{rem(40)});
 
+    @include small-mobile {
+      padding-left: #{rem(10)};
+      padding-right: #{rem(10)};
+      justify-content: space-between;
+      gap: 0;
+    }
+
   }
 
   &__item {

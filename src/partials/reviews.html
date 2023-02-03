@@ -1,15 +1,63 @@
 <link rel="stylesheet" href="/css/components/reviews.min.css">
-<script defer src="/js/reviews.min.js"></script>
+<script defer src="/js/reviews.js"></script>
 <section class="reviews">
   <div class="reviews__container container">
     <h2 class="reviews__title">Обзоры</h2>
     <div class="reviews__buttons buttons">
-      <button class="buttons__technic secondary-button buttons__technic_active" onclick="SwiperInit('.rewiews__technic', true);">Техника</button>
-      <button class="buttons__restaurants secondary-button" onclick="SwiperInit('.rewiews__restaurants', true);">Рестораны</button>
+      <button class="buttons__change secondary-button buttons__change_active" onclick="SwiperInit();">Техника</button>
+      <button class="buttons__change secondary-button" onclick="SwiperInit();">Рестораны</button>
     </div>
 
-    <!--#include virtual="/partials/reviews/technic.html" -->
-    <!--#include virtual="/partials/reviews/restaurants.html" -->
+    <div class="swiper reviews__content">
+      <div class="swiper-wrapper">
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+      </div>
+      <div class="swiper__navigation">
+        <a class="swiper__more primary-button" href="#">Все обзоры</a>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <div class="swiper reviews__content" style="display: none;">
+      <div class="swiper-wrapper">
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+        <!--#include virtual="/partials/reviews/slide.html" -->
+      </div>
+      <div class="swiper__navigation">
+        <a class="swiper__more primary-button" href="#">Все обзоры</a>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
 
   </div>
 </section>
+
+
+
+

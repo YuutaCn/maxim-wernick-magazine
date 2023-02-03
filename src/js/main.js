@@ -22,14 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Поиск закрываем по клику вне
   document.addEventListener('click', el => {
-    if (document.querySelector('.header__search').contains(el.target)){
-    } else{
+    if (!document.querySelector('.header__search').contains(el.target)){
       document.querySelector('.header__search').classList.remove('search_active');
       document.querySelector('.search__result').classList.remove('result_active');
       if (window.screen.availWidth < 1024) {
         document.querySelector('.header__title').classList.toggle('visually-hidden');
       };
-    }
+    };
   });
 
   // Поиск закрываем на "Esc"

@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="/css/components/travels/common.min.css">
+<script defer src="/js/select-sorting.js"></script>
+<section class="travels-page" id="travels-page">
+  <div class="travels-page__container container">
+    <h1>Путешествия</h1>
+
+    <div class="travels-page__wrapper">
+
+      <div class="travels-page__main main">
+
+        <div class="main__top top">
+          <h2 class="top__title">Франция</h2>
+          <ul class="top__tegs tegs list">
+            <li class="tegs__item">Франция</li>
+            <li class="tegs__item">Чехия</li>
+            <li class="tegs__item">Мексика</li>
+            <li class="tegs__item">Очень новая зеландия</li>
+          </ul>
+          <label class="top__sorting sorting select-wrapper">
+            <select class="sorting__select select" name="travels-sorting" id="sorting">
+              <option value="Сначала новые">Сначала новые</option>
+              <option value="Сначала старые">Сначала старые</option>
+              <option value="Популярные">Популярные</option>
+              <option value="Выбор автора">Выбор автора</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="main__content content">
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+          <!--#include virtual="/partials/index/common/travels.html" -->
+        </div>
+
+        <div class="main__pagination pagination">
+          <a class="pagination__prev pagination__prev_disabled" href="#"></a>
+          <ul class="pagination__list list">
+            <li class="list__item list__item_active"><a href="#">1</a></li>
+            <li class="list__item"><a href="#">2</a></li>
+            <li class="list__item"><a href="#">3</a></li>
+            <li class="list__item"><a href="#">4</a></li>
+            <li class="list__item"><a href="#">...</a></li>
+            <li class="list__item"><a href="#">9</a></li>
+            <li class="list__item"><a href="#">10</a></li>
+          </ul>
+          <a class="pagination__next" href="#"></a>
+        </div>
+
+      </div>
+
+      <div class="travels-page__secondary secondary">
+        <div class="secondary__select select">
+          <h2>Сменить страну или город</h2>
+
+          <div class="select__container">
+
+            <label class="secondary__sorting sorting select-wrapper">
+              <select class="sorting__select select" name="travels-sorting" id="sorting">
+                <option disabled selected value="null">Страны</option>
+                <option value="Франция">Франция</option>
+                <option value="Греция">Греция</option>
+                <option value="Америка">Америка</option>
+                <option value="Италия">Италия</option>
+                <option value="Швеция">Швеция</option>
+              </select>
+            </label>
+
+            <label class="secondary__sorting sorting select-wrapper">
+              <select class="sorting__select select" name="travels-sorting" id="sorting">
+                <option disabled selected value="null">Города</option>
+                <option value="Франция">Франция</option>
+                <option value="Греция">Греция</option>
+                <option value="Америка">Америка</option>
+                <option value="Италия">Италия</option>
+                <option value="Швеция">Швеция</option>
+              </select>
+            </label>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
