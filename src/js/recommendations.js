@@ -1,4 +1,4 @@
-new Swiper('.best__swiper', {
+new Swiper('.recommendations__swiper', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -8,28 +8,20 @@ new Swiper('.best__swiper', {
     type: 'bullets',
     clickable: true
   },
-  autoplay: {
-    delay: 3000,
-  },
+  spaceBetween: 20,
+  loop: true,
+  preventClicks: true,
   breakpoints: {
-    1440: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    1024: {
+    1210: {
+      slidesPerGroup: 2,
       slidesPerView: 'auto',
-      spaceBetween: 30,
     },
     768: {
       slidesPerView: 'auto',
-      spaceBetween: 30,
     },
     320: {
-      slidesPerView: '1',
-      spaceBetween: 20,
+      slidesPerView: 1,
     },
   },
-  loop: true,
-  preventClicks: true,
-  speed: 400
+  speed: 400,
 });

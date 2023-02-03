@@ -2,7 +2,7 @@
 <section class="common">
   <div class="common__container container">
 
-    <div class="common__latest-news latest-news">
+    <div class="common__latest-news latest-news block">
       <p class="latest-news__title">Самы свежий контент
         в <a href="#">telegram</a></p>
       <ul class="latest-news__list list">
@@ -13,8 +13,9 @@
       </ul> <!-- /latest-news__list -->
     </div> <!-- /latest-news -->
 
-    <div class="common__best best">
+    <div class="common__best best block">
       <script defer src="/js/index/swiper-best.js"></script>
+      <h2 class="best__title">Лучшее</h2>
       <div class="swiper best__swiper">
         <div class="swiper-wrapper">
           <!--#include virtual="/partials/index/common/best.html" -->
@@ -24,39 +25,52 @@
           <!--#include virtual="/partials/index/common/best.html" -->
         </div>
         <div class="swiper__navigation">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-
-    <div class="common__opinions opinions">
-      <script defer src="/js/index/swiper-opinions.js"></script>
-      <h2 class="opinions__title">Мнения</h2>
-
-      <div class="swiper opinions__swiper">
-        <div class="swiper-wrapper">
-          <!--#include virtual="/partials/index/common/opinions.html" -->
-          <!--#include virtual="/partials/index/common/opinions.html" -->
-          <!--#include virtual="/partials/index/common/opinions.html" -->
-          <!--#include virtual="/partials/index/common/opinions.html" -->
-          <!--#include virtual="/partials/index/common/opinions.html" -->
-          <!--#include virtual="/partials/index/common/opinions.html" -->
-          <!--#include virtual="/partials/index/common/opinions.html" -->
-          <!--#include virtual="/partials/index/common/opinions.html" -->
-          <!--#include virtual="/partials/index/common/opinions.html" -->
-        </div>
-        <div class="swiper__navigation">
           <div class="swiper-pagination"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
       </div>
-
     </div>
 
-    <div class="common__travels travels">
+    <div class="common__right block">
+
+      <div class="common__opinions opinions">
+        <script defer src="/js/index/swiper-opinions.js"></script>
+        <h2 class="opinions__title">Мнение</h2>
+
+        <div class="swiper opinions__swiper">
+          <div class="swiper-wrapper">
+            <!--#include virtual="/partials/index/common/opinions.html" -->
+            <!--#include virtual="/partials/index/common/opinions.html" -->
+            <!--#include virtual="/partials/index/common/opinions.html" -->
+            <!--#include virtual="/partials/index/common/opinions.html" -->
+            <!--#include virtual="/partials/index/common/opinions.html" -->
+            <!--#include virtual="/partials/index/common/opinions.html" -->
+            <!--#include virtual="/partials/index/common/opinions.html" -->
+            <!--#include virtual="/partials/index/common/opinions.html" -->
+            <!--#include virtual="/partials/index/common/opinions.html" -->
+          </div>
+          <div class="swiper__navigation">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="common__video video">
+        <h2 class="video__title">Видео</h2>
+        <div class="video__items">
+            <!--#include virtual="/partials/index/common/video.html" -->
+            <!--#include virtual="/partials/index/common/video.html" -->
+            <!--#include virtual="/partials/index/common/video.html" -->
+        </div>
+        <a class="video__more primary-button" href="#">Плейлисты</a>
+      </div>
+    </div>
+
+    <div class="common__travels travels block">
       <script defer src="/js/index/travels.min.js"></script>
       <h2 class="travels__title">Путешествия - свежее</h2>
       <div class="travels__buttons buttons">
