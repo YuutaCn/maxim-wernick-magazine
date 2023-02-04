@@ -1,8 +1,17 @@
 <link rel="stylesheet" href="/css/components/travels/common.min.css">
-<script defer src="/js/select-sorting.js"></script>
-<section class="travels-page" id="travels-page">
+<script defer src="/js/select.min.js"></script>
+<script defer src="/js/pages.min.js"></script>
+<script defer src="/js/filter-menu.min.js"></script>
+<section class="travels-page" id="travels-page" data-pages="">
   <div class="travels-page__container container">
-    <h1>Путешествия</h1>
+
+    <div class="travels-page__header">
+      <h1>Путешествия</h1>
+      <button class="travels-page__filter button" data-filter="">
+        <img class="button__icon" src="/img/svg/filter.svg" alt="фильтры">
+        Фильтры
+      </button>
+    </div>
 
     <div class="travels-page__wrapper">
 
@@ -13,8 +22,6 @@
           <ul class="top__tegs tegs list">
             <li class="tegs__item">Франция</li>
             <li class="tegs__item">Чехия</li>
-            <li class="tegs__item">Мексика</li>
-            <li class="tegs__item">Очень новая зеландия</li>
           </ul>
           <label class="top__sorting sorting select-wrapper">
             <select class="sorting__select select" name="travels-sorting" id="sorting">
@@ -26,7 +33,7 @@
           </label>
         </div>
 
-        <div class="main__content content">
+        <div class="main__content content" data-content-pages="">
           <!--#include virtual="/partials/index/common/travels.html" -->
           <!--#include virtual="/partials/index/common/travels.html" -->
           <!--#include virtual="/partials/index/common/travels.html" -->
@@ -59,39 +66,70 @@
           <a class="pagination__next" href="#"></a>
         </div>
 
+        <button class="main__more primary-button" data-more="">Показать еще</button>
+
       </div>
 
       <div class="travels-page__secondary secondary">
-        <div class="secondary__select select">
-          <h2>Сменить страну или город</h2>
+        <div class="secandary__filter filter-menu" data-filter-menu>
 
-          <div class="select__container">
+          <div class="filter-menu__header">
+            <h2 class="filter-menu__title">Путешествия</h2>
+            <button class="filter-menu__close button" data-filter-item>
+              <img src="/img/svg/close.svg" alt="закрыть">
+            </button>
+          </div>
 
-            <label class="secondary__sorting sorting select-wrapper">
-              <select class="sorting__select select" name="travels-sorting" id="sorting">
-                <option disabled selected value="null">Страны</option>
-                <option value="Франция">Франция</option>
-                <option value="Греция">Греция</option>
-                <option value="Америка">Америка</option>
-                <option value="Италия">Италия</option>
-                <option value="Швеция">Швеция</option>
-              </select>
-            </label>
+          <div class="filter-menu__filters filters">
+            <h2 class="filters__title">Фильтры</h2>
+            <button class="filters__reset button">Сбросить</button>
+          </div>
 
-            <label class="secondary__sorting sorting select-wrapper">
-              <select class="sorting__select select" name="travels-sorting" id="sorting">
-                <option disabled selected value="null">Города</option>
-                <option value="Франция">Франция</option>
-                <option value="Греция">Греция</option>
-                <option value="Америка">Америка</option>
-                <option value="Италия">Италия</option>
-                <option value="Швеция">Швеция</option>
-              </select>
-            </label>
+          <!--#include virtual="/partials/select/select.html" -->
+          <!--#include virtual="/partials/chips/chips.html" -->
 
+          <div class="secondary__calendar calendar">
+            <h2>Дата публикации</h2>
+            <img src="https://i.imgur.com/b1QErDj.png" alt="пусть будет">
+          </div>
+
+          <button class="filter-menu__apply primary-button">Применить</button>
+        </div>
+        <div class="secondary__opinions opinions">
+          <script defer src="/js/index/swiper-opinions.js"></script>
+          <h2 class="opinions__title">Мнение</h2>
+
+          <div class="swiper opinions__swiper">
+            <div class="swiper-wrapper">
+              <!--#include virtual="/partials/index/common/opinions.html" -->
+              <!--#include virtual="/partials/index/common/opinions.html" -->
+              <!--#include virtual="/partials/index/common/opinions.html" -->
+              <!--#include virtual="/partials/index/common/opinions.html" -->
+              <!--#include virtual="/partials/index/common/opinions.html" -->
+              <!--#include virtual="/partials/index/common/opinions.html" -->
+              <!--#include virtual="/partials/index/common/opinions.html" -->
+              <!--#include virtual="/partials/index/common/opinions.html" -->
+              <!--#include virtual="/partials/index/common/opinions.html" -->
+            </div>
+            <div class="swiper__navigation">
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
           </div>
 
         </div>
+
+        <div class="common__video video">
+          <h2 class="video__title">Видео</h2>
+          <div class="video__items">
+            <!--#include virtual="/partials/index/common/video.html" -->
+            <!--#include virtual="/partials/index/common/video.html" -->
+            <!--#include virtual="/partials/index/common/video.html" -->
+          </div>
+          <a class="video__more primary-button" href="#">Плейлисты</a>
+        </div>
+
       </div>
 
     </div>
