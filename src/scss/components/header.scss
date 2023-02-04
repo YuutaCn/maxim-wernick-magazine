@@ -1,10 +1,18 @@
 @import "../mixins";
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;left: 0;
+  z-index: 12;
   width: 100%;
   padding: #{rem(20)} 0;
   border-bottom: solid 1px var(--dark-color);
+  background: #fff;
+
+  &_active {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-bottom: solid 1px #ffffff00;
+  }
 
   @include tablet {
     padding: #{rem(12)} 0;
@@ -45,10 +53,27 @@
       height: #{rem(17)};
     }
 
-    &-icon {
+    & .open,
+    & .close {
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+
+    & .close {
+      display: none;
+    }
+
+    &_active {
+
+      & .open {
+        display: none;
+      }
+
+      & .close {
+        display: block;
+      }
+
     }
   }
 
@@ -186,11 +211,20 @@
 }
 
 .nav {
+  margin-top: #{rem(71)};
   width: 100%;
   height: 100%;
   padding-top: #{rem(10)};
   padding-bottom: #{rem(15)};
   border-bottom: solid 1px var(--dark-color-60);
+
+  @include tablet {
+    margin-top: #{rem(55)};
+  }
+
+  @include small-tablet {
+    margin-top: #{rem(41)};
+  }
 
   @include mobile {
     padding-bottom: #{rem(10)};
@@ -203,6 +237,13 @@
     justify-content: center;
     align-items: center;
     gap: Min(Max(#{rem(22)}, 2.8vw), #{rem(40)});
+
+    @include small-mobile {
+      padding-left: #{rem(10)};
+      padding-right: #{rem(10)};
+      justify-content: space-between;
+      gap: 0;
+    }
 
   }
 

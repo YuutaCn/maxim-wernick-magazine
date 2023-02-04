@@ -2,16 +2,16 @@
 <section class="common">
   <div class="common__container container">
 
-    <div class="common__latest-news latest-news block">
-      <p class="latest-news__title">Самы свежий контент
+    <div class="common__latest latest block">
+      <p class="latest__title">Самы свежий контент
         в <a href="#">telegram</a></p>
-      <ul class="latest-news__list list">
-        <!--#include virtual="/partials/index/common/latest-news.html" -->
-        <!--#include virtual="/partials/index/common/latest-news.html" -->
-        <!--#include virtual="/partials/index/common/latest-news.html" -->
-        <!--#include virtual="/partials/index/common/latest-news.html" -->
-      </ul> <!-- /latest-news__list -->
-    </div> <!-- /latest-news -->
+      <ul class="latest__list list">
+        <!--#include virtual="/partials/index/common/latest.html" -->
+        <!--#include virtual="/partials/index/common/latest.html" -->
+        <!--#include virtual="/partials/index/common/latest.html" -->
+        <!--#include virtual="/partials/index/common/latest.html" -->
+      </ul> <!-- /latest__list -->
+    </div> <!-- /latest -->
 
     <div class="common__best best block">
       <script defer src="/js/index/swiper-best.js"></script>
@@ -62,9 +62,9 @@
       <div class="common__video video">
         <h2 class="video__title">Видео</h2>
         <div class="video__items">
-            <!--#include virtual="/partials/index/common/video.html" -->
-            <!--#include virtual="/partials/index/common/video.html" -->
-            <!--#include virtual="/partials/index/common/video.html" -->
+          <!--#include virtual="/partials/index/common/video.html" -->
+          <!--#include virtual="/partials/index/common/video.html" -->
+          <!--#include virtual="/partials/index/common/video.html" -->
         </div>
         <a class="video__more primary-button" href="#">Плейлисты</a>
       </div>
@@ -74,10 +74,21 @@
       <script defer src="/js/index/travels.min.js"></script>
       <h2 class="travels__title">Путешествия - свежее</h2>
       <div class="travels__buttons buttons">
-        <button class="buttons__countries secondary-button buttons__countries_active">Страны</button>
-        <button class="buttons__cities secondary-button">Города</button>
+        <button class="buttons__change secondary-button buttons__change_active">Страны</button>
+        <button class="buttons__change secondary-button">Города</button>
       </div>
-      <!--#include virtual="/partials/index/common/travels.html" -->
+      <div class="travels__content content content_active">
+        <!--#include virtual="/partials/index/common/travels.html" -->
+        <!--#include virtual="/partials/index/common/travels.html" -->
+        <!--#include virtual="/partials/index/common/travels.html" -->
+        <!--#include virtual="/partials/index/common/travels.html" -->
+      </div>
+      <div class="travels__content content">
+        <!--#include virtual="/partials/index/common/travels.html" -->
+        <!--#include virtual="/partials/index/common/travels.html" -->
+        <!--#include virtual="/partials/index/common/travels.html" -->
+        <!--#include virtual="/partials/index/common/travels.html" -->
+      </div>
       <a class="travels__more primary-button" href="#">Все статьи про путешествия</a>
     </div>
   </div>

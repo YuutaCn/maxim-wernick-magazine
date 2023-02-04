@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // Поиск открываем
-  document.querySelector('.search__button').addEventListener('click', () => {
+  document.querySelector('[data-search]').addEventListener('click', () => {
     if (window.screen.availWidth < 1024) {
       document.querySelector('.header__title').classList.toggle('visually-hidden');
     };
@@ -22,14 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Поиск закрываем по клику вне
   document.addEventListener('click', el => {
-    if (document.querySelector('.header__search').contains(el.target)){
-    } else{
+    if (!document.querySelector('.header__search').contains(el.target)){
       document.querySelector('.header__search').classList.remove('search_active');
       document.querySelector('.search__result').classList.remove('result_active');
       if (window.screen.availWidth < 1024) {
-        document.querySelector('.header__title').classList.toggle('visually-hidden');
+        document.querySelector('.header__title').classList.remove('visually-hidden');
       };
-    }
+    };
   });
 
   // Поиск закрываем на "Esc"
@@ -43,3 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+const headerHtml = document?.querySelector('.header'),
+      headerHeight = headerHtml.offsetHeight;
+
+window.onscroll = () => (window.scrollY > headerHeight / 1.5) ? headerHtml.classList.add('header_active') : headerHtml.classList.remove('header_active');
+
