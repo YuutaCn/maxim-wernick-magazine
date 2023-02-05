@@ -589,3 +589,24 @@ h4 {
     }
   }
 }
+
+
+
+.tegs {
+  display: flex;
+  flex-direction: row;
+  gap: #{rem(10)};
+
+  &__item {
+    background: #313131;
+    border-radius: 2px;
+    padding: #{rem(5)} #{rem(10)};
+    font-family: var(--font-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: #{rem(12)};
+    line-height: #{rem(15)};
+    letter-spacing: -0.019em;
+    color: var(--light-color);
+  }
+}
