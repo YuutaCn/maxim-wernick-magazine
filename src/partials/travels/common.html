@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/css/components/travels/common.min.css">
-<script defer src="/js/select.min.js"></script>
 <script defer src="/js/pages.min.js"></script>
 <script defer src="/js/filter-menu.min.js"></script>
 <section class="travels-page" id="travels-page" data-pages="">
@@ -23,14 +22,20 @@
             <li class="tags__item">Франция</li>
             <li class="tags__item">Чехия</li>
           </ul>
-          <label class="top__sorting sorting select-wrapper">
-            <select class="sorting__select select" name="travels-sorting" id="sorting">
-              <option value="Сначала новые">Сначала новые</option>
-              <option value="Сначала старые">Сначала старые</option>
-              <option value="Популярные">Популярные</option>
-              <option value="Выбор автора">Выбор автора</option>
-            </select>
-          </label>
+
+          <div class="top__sorting sorting">
+            <label class="sorting__select">
+              <input class="visually-hidden" type="checkbox"></input>
+              <span class="sorting__current">Сначала новые</span>
+              <ul class="sorting__list list">
+                <li class="list__item"><a href="/">Сначала новые</a></li>
+                <li class="list__item"><a href="/">Сначала старые</a></li>
+                <li class="list__item"><a href="/">Популярные</a></li>
+                <li class="list__item"><a href="/">Выбор автора</a></li>
+              </ul>
+            </label>
+          </div>
+
         </div>
 
         <div class="main__content content" data-content-pages="">
@@ -65,8 +70,6 @@
           </ul>
           <a class="pagination__next" href="#"></a>
         </div>
-
-        <button class="main__more primary-button" data-more="">Показать еще</button>
 
       </div>
 

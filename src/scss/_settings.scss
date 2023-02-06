@@ -58,11 +58,6 @@ footer {
   margin-top: auto;
 }
 
-.is-hidden {
-  display: none !important;
-  /* stylelint-disable-line declaration-no-important */
-}
-
 .button {
   border: none;
   padding: 0;
@@ -182,28 +177,6 @@ footer {
   max-width: var(--container-width);
 }
 
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
-}
-
-.centered {
-  text-align: center;
-}
-
-.dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  overscroll-behavior: none;
-}
-
-.page--ios .dis-scroll {
-  position: relative;
-}
-
 h1,
 h2,
 h3,
@@ -269,7 +242,6 @@ label.chips__item {
     display: flex;
     width: max-content;
     padding: #{rem(5)} #{rem(10)};
-    // background: var(--dark-color);
     border-radius: 2px;
     font-family: var(--font-inter);
     font-style: normal;
@@ -477,18 +449,6 @@ h4 {
 }
 
 .select-wrapper {
-  display: none;
-
-  & select {
-    display: none;
-    opacity: 0;
-    position: absolute;
-    height: 1px;
-    width: 1px;
-  }
-}
-
-.custom-select {
   position: relative;
   display: flex;
 
@@ -508,6 +468,10 @@ h4 {
     letter-spacing: -0.019em;
     padding-right: #{rem(30)};
     color: var(--dark-color);
+
+    &_disable {
+      border: solid 1px var(--dark-color-20)
+    }
 
     &::before {
       content: '';
@@ -542,7 +506,7 @@ h4 {
     line-height: #{rem(19)};
     letter-spacing: -0.019em;
     opacity: 0;
-    visibility: hiden;
+    visibility: hidden;
     pointer-events: none;
     transition: all 0.15s var(--cubic-bezier);
 
