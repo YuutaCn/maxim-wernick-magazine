@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/css/components/index/common.min.css">
-<section class="common">
+<section class="common" itemscope="itemscope" itemtype="https://schema.org/Blog">
+  <meta itemprop="description" content="Описание главной страницы блога">
   <div class="common__container container">
 
     <div class="common__latest latest block">
@@ -32,7 +33,7 @@
       </div>
     </div>
 
-    <div class="common__right block">
+    <aside class="common__right block" itemscope itemtype="http://schema.org/WPSideBar">
 
       <div class="common__opinions opinions">
         <script defer src="/js/index/swiper-opinions.js"></script>
@@ -68,7 +69,7 @@
         </div>
         <a class="video__more primary-button" href="#">Плейлисты</a>
       </div>
-    </div>
+    </aside>
 
     <div class="common__travels travels block">
       <script defer src="/js/index/travels.min.js"></script>

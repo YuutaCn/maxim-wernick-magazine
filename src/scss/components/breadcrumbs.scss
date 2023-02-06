@@ -2,63 +2,75 @@
 
 .breadcrumbs {
   margin-top: #{rem(40)};
-display: flex;
-
-& .list {
   display: flex;
-  flex-direction: row;
 
-  &__item {
+  @include mobile {
+    margin-top: #{rem(20)};
+    padding-bottom: #{rem(10)};
+    border-bottom: solid 1px var(--dark-color-20);
+  }
+
+  & .list {
     display: flex;
-    position: relative;
-    padding-left: #{rem(16)};
-    padding-right: #{rem(8)};
+    flex-wrap: wrap;
+    flex-direction: row;
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;bottom: 0;
-      margin-top: auto;
-      margin-bottom: auto;
-      border: solid 1px #8C8D8D;
-      border-width: 1px 1px 0 0;
-      width: #{rem(7)};
-      height: #{rem(7)};
-      transform: rotate(45deg);
-    }
-
-    &:nth-child(1) {
-      padding-left: 0;
+    &__item {
+      display: flex;
+      position: relative;
+      padding-left: #{rem(16)};
+      padding-right: #{rem(8)};
 
       &::before {
-        display: none;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        border: solid 1px #8C8D8D;
+        border-width: 1px 1px 0 0;
+        width: #{rem(7)};
+        height: #{rem(7)};
+        transform: rotate(45deg);
       }
-    }
 
-    & a {
-      font-family: var(--font-inter);
-      font-style: normal;
-      font-weight: 400;
-      font-size: #{rem(12)};
-      line-height: 150%;
-      color: #8C8D8D;
+      &:nth-child(1) {
+        padding-left: 0;
 
-      background-image: linear-gradient(var(--dark-color-20), var(--dark-color-20));
-      background-position: 0% 100%;
-      background-repeat: no-repeat;
-      background-size: 0% 1px;
-      transition: background-size .15s var(--cubic-bezier),
-        background .15s var(--cubic-bezier),
-        color .15s var(--cubic-bezier);
+        &::before {
+          display: none;
+        }
+      }
 
-      &:hover,
-      &:focus {
-        color: var(--secondary-color);
-        background-size: 100% 1px;
+      & a {
+        font-family: var(--font-inter);
+        font-style: normal;
+        font-weight: 400;
+        font-size: #{rem(12)};
+        line-height: 150%;
+        color: #8C8D8D;
+
+        background-image: linear-gradient(var(--dark-color-20), var(--dark-color-20));
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: background-size .15s var(--cubic-bezier),
+          background .15s var(--cubic-bezier),
+          color .15s var(--cubic-bezier);
+
+          @include mobile {
+            font-size: #{rem(8)};
+          }
+
+        &:hover,
+        &:focus {
+          color: var(--secondary-color);
+          background-size: 100% 1px;
+        }
       }
     }
   }
-}
 
 }

@@ -1,22 +1,23 @@
 <link rel="stylesheet" href="/css/components/blog-page/common.min.css">
-
-
 <script defer src="/js/shop.js"></script>
-<section class="common">
+
+<section class="common" itemscope itemtype="https://schema.org/BlogPosting">
+  <meta content="https://domen.ru/blog-page/" itemprop="mainEntityOfPage">
+
   <div class="common__container container">
     <div class="common__head head">
       <div class="head__top top">
-        <time class="top__date" datetime="2022-01-23">23.01.2022</time>
+        <time class="top__date" datetime="2022-01-23" itemprop="datePublished">23.01.2022</time>
         <span class="top__views">
           <img src="/img/svg/views.svg" alt="Просмотры">
           128
         </span>
         <!--#include virtual="/partials/share.html" -->
       </div>
-      <h1>Louis Vuitton - Торговля не останавливается</h1>
+      <h1 itemprop="headline">Louis Vuitton - Торговля не останавливается</h1>
     </div>
     <!--#include virtual="/partials/blog-page/article.html" -->
-    <aside class="aside">
+    <aside class="aside" itemscope itemtype="http://schema.org/WPSideBar">
       <!--#include virtual="/partials/blog-page/aside.html" -->
     </aside>
     <aside class="common__shop shop">
