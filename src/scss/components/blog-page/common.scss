@@ -8,6 +8,11 @@
     display: grid;
     grid-template-columns: #{rem(770)} 1fr;
     grid-template-rows: 1fr;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   & .head {
@@ -18,6 +23,10 @@
       flex-direction: row;
       align-items: center;
       margin-top: #{rem(30)};
+
+      @include mobile {
+        margin-top: #{rem(20)};
+      }
 
       &__date {
         font-family: 'Inter';
@@ -51,6 +60,7 @@
       margin-top: #{rem(20)};
       margin-bottom: #{rem(15)};
       font-size: Min(Max(#{rem(24)}, 2.22vw), #{rem(32)});
+      line-height: Min(Max(#{rem(23)}, 2.22vw), #{rem(31)});
     }
   }
 
@@ -61,6 +71,11 @@
     display: flex;
     flex-direction: column;
     gap: #{rem(40)};
+
+    @include small-tablet {
+      gap: #{rem(30)};
+      padding-top: #{rem(20)};
+    }
 
     &__post {
       display: flex;
@@ -100,6 +115,11 @@
       line-height: 150%;
       letter-spacing: -0.019em;
       color: var(--dark-color);
+    }
+
+    & ol,
+    & ul {
+      padding-left: #{rem(16)};
     }
 
     & a {
@@ -189,6 +209,24 @@
   & .aside {
     padding-left: #{rem(60)};
 
+    @include tablet {
+      padding-left: 0;
+      margin-top: #{rem(30)};
+      padding-top: #{rem(50)};
+      border-top: solid 1px var(--dark-color-20);
+      order: 5;
+    }
+
+    & .filter-menu {
+      display: flex;
+      flex-direction: column;
+
+      &__header,
+      &__filters {
+        display: none;
+      }
+    }
+
     & .like {
       margin-top: #{rem(40)};
       padding-top: #{rem(40)};
@@ -209,9 +247,10 @@
 
         & .cover {
           width: #{rem(127)};
-          height: #{rem(127)};
+          height: auto;
           flex-shrink: 0;
           justify-content: end;
+          aspect-ratio: 1/1;
         }
 
         & .text {
@@ -256,6 +295,10 @@
             align-items: flex-start;
           }
 
+          @include mobile {
+            flex-direction: column;
+          }
+
           &__cover {
             position: relative;
             height: auto;
@@ -265,15 +308,17 @@
             aspect-ratio: 4/3;
 
             @include tablet {
-              width: #{rem(200)};
-            }
-
-            @include small-tablet {
-              width: #{rem(270)};
+              width: #{rem(370)};
+              height: auto;
+              overflow: hidden;
+              aspect-ratio: 16/9;
             }
 
             @include mobile {
-              width: #{rem(170)};
+              width: 100%;
+              height: auto;
+              overflow: hidden;
+              aspect-ratio: 16/9;
             }
 
             &:hover {
@@ -382,6 +427,10 @@
     padding-top: #{rem(40)};
     border-top: solid 1px var(--dark-color-20);
 
+    @include mobile {
+      margin-top: #{rem(30)};
+    }
+
     & .swiper {
 
       &-slide {
@@ -463,11 +512,17 @@
       &__navigation {
         justify-content: center;
         margin-top: #{rem(24)};
+
+        @include mobile {}
       }
 
-        & .swiper-button-prev,
-        & .swiper-button-next {
-          display: none;
+      & .swiper-button-prev,
+      & .swiper-button-next {
+        display: none;
+
+        @include mobile {
+          display: flex;
+        }
 
       }
     }
