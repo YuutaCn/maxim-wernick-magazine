@@ -34,7 +34,7 @@ selectWrapper.forEach(select => {
     });
 
     function currentCheck() {
-      if (selectInput.value == '' || selectInput.value == 'null') {
+      if (selectInput.value == '' || selectInput.value == '0') {
         selectCurrent.classList.add('current_disable');
       } else {
         selectCurrent.classList.remove('current_disable');
@@ -44,4 +44,4 @@ selectWrapper.forEach(select => {
     function selectClose() {
       select.classList.remove('select-wrapper_show');
     };
-});
+  });
