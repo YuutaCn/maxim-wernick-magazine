@@ -133,7 +133,7 @@
           }
         }
 
-        & .tegs {
+        & .tags {
           margin-left: #{rem(20)};
 
           @include mobile {
@@ -290,6 +290,11 @@
           justify-content: center;
           width: #{rem(20)};
           height: #{rem(20)};
+          font-family: var(--font-inter);
+          font-style: normal;
+          font-weight: 400;
+          font-size: #{rem(10)};
+          line-height: 143%;
         }
 
         & .list {

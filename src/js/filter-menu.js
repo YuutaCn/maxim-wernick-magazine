@@ -1,4 +1,3 @@
-let filterMenuStatus = false;
 (function () {
   const filter = document?.querySelector('[data-filter]');
   const filterMenu = document?.querySelector('[data-filter-menu]');
@@ -8,18 +7,15 @@ let filterMenuStatus = false;
     filter?.classList.toggle('filter_active');
     filterMenu?.classList.toggle('filter-menu_active');
     document.querySelector('body').classList.add('page__body_disabled');
-    filterMenuStatus = true;
 
     if (filterMenu?.classList.contains('filter-menu_active')) {
       filter?.setAttribute('aria-expanded', 'true');
       filter?.setAttribute('aria-label', 'Закрыть меню');
       document.querySelector('body').classList.add('page__body_disabled');
-      filterMenuStatus = true;
     } else {
       filter?.setAttribute('aria-expanded', 'false');
       filter?.setAttribute('aria-label', 'Открыть меню');
       document.querySelector('body').classList.remove('page__body_disabled');
-      filterMenuStatus = false;
     }
   }
 
@@ -35,7 +31,6 @@ let filterMenuStatus = false;
       filterMenu.classList.remove('filter-menu_active');
       filterItems?.forEach(el => el.classList.remove('filter-menu_active'));
       document.querySelector('body').classList.remove('page__body_disabled');
-      filterMenuStatus = false;
     });
   });
 })();
