@@ -15,9 +15,16 @@
   <script defer src="/js/main.min.js"></script>
 </head>
 
-<body class="page__body">
+<body class="page__body" itemscope itemtype="https://schema.org/WebPage">
   <div class="site-container">
-    <header class="header">
+    <header class="header" itemscope itemtype="https://schema.org/WPHeader">
+      <meta itemprop="description" content="описание блога">
+      <div style="display: none;" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        <img itemprop="url image" src="https://example.com/img.jpg" width="750" height="200" alt="Мой сайт">
+        <meta itemprop="width" content="200">
+        <meta itemprop="height" content="200">
+      </div> <!-- логотип блога -->
+
       <div class="header__container container">
 
         <div class="header__buttons">
@@ -38,13 +45,14 @@
               <li class="result__item"><a href="/blog-page.html">Paris</a></li>
               <li class="result__item"><a href="/blog-page.html">Paris France</a></li>
               <li class="result__item"><a href="/blog-page.html">Paris</a></li>
-              <li class="result__item"><a href="/blog-page.html">Paris France Paris France Paris France Paris France </a></li>
+              <li class="result__item"><a href="/blog-page.html">Paris France Paris France Paris France Paris France
+                </a></li>
             </ul>
           </form> <!-- /header__search -->
 
         </div> <!-- /header__buttons -->
 
-        <p class="header__title">
+        <p class="header__title" itemprop="name">
           <a href="/">
             Журнал Макса Верника
           </a>
@@ -56,13 +64,14 @@
 
     </header>
 
-    <nav class="nav">
+    <nav class="nav" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
       <ul class="nav__list list">
-        <li class="nav__item"><a href="/travels.html">Путешествия</a></li>
-        <li class="nav__item"><a href="/travels.html">Обзоры</a></li>
-        <li class="nav__item"><a href="/travels.html">Видео</a></li>
-        <li class="nav__item"><a href="/travels.html">Мнения</a></li>
-        <li class="nav__item"><a href="/travels.html">Советы</a></li>
+        <li class="nav__item" style="display: none"><a href="/" itemprop="url">Главная</a></li>
+        <li class="nav__item"><a href="/travels.html" itemprop="url">Путешествия</a></li>
+        <li class="nav__item"><a href="/travels.html" itemprop="url">Обзоры</a></li>
+        <li class="nav__item"><a href="/travels.html" itemprop="url">Видео</a></li>
+        <li class="nav__item"><a href="/travels.html" itemprop="url">Мнения</a></li>
+        <li class="nav__item"><a href="/travels.html" itemprop="url">Советы</a></li>
       </ul>
     </nav> <!-- /nav -->
 
