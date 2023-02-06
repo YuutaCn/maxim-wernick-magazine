@@ -1,10 +1,14 @@
-<label class="secondary__sorting sorting select-wrapper">
-  <select class="sorting__select select" name="travels-sorting" id="sorting">
-    <option disabled selected value="null">Страны</option>
-    <option value="Франция">Франция</option>
-    <option value="Греция">Греция</option>
-    <option value="Америка">Америка</option>
-    <option value="Италия">Италия</option>
-    <option value="Швеция">Швеция</option>
-  </select>
-</label>
+<div class="select-wrapper" data-select-wrapper>
+  <input type="hidden" name="travels-sorting" value="0">
+  <div class="select-wrapper__current current current_disable">
+    Страны
+  </div>
+  <ul class="select-wrapper__list list">
+    <li class="list__item list__item_disabled" data-value="0">Страны</li>
+    <li class="list__item" data-value="id1">Франция</li>
+    <li class="list__item" data-value="id2">Греция</li>
+    <li class="list__item" data-value="id3">Америка</li>
+    <li class="list__item" data-value="id4">Италия</li>
+    <li class="list__item" data-value="id5">Швеция</li>
+  </ul>
+</div>

@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/css/components/travels/common.min.css">
-<script defer src="/js/select.min.js"></script>
 <script defer src="/js/pages.min.js"></script>
 <script defer src="/js/filter-menu.min.js"></script>
 <section class="travels-page" id="travels-page" data-pages="">
@@ -19,18 +18,24 @@
 
         <div class="main__top top">
           <h2 class="top__title">Франция</h2>
-          <ul class="top__tegs tegs list">
-            <li class="tegs__item">Франция</li>
-            <li class="tegs__item">Чехия</li>
+          <ul class="top__tags tags list">
+            <li class="tags__item">Франция</li>
+            <li class="tags__item">Чехия</li>
           </ul>
-          <label class="top__sorting sorting select-wrapper">
-            <select class="sorting__select select" name="travels-sorting" id="sorting">
-              <option value="Сначала новые">Сначала новые</option>
-              <option value="Сначала старые">Сначала старые</option>
-              <option value="Популярные">Популярные</option>
-              <option value="Выбор автора">Выбор автора</option>
-            </select>
-          </label>
+
+          <div class="top__sorting sorting" data-close-checkbox>
+            <label class="sorting__select">
+              <input class="visually-hidden" type="checkbox"></input>
+              <span class="sorting__current">Сначала новые</span>
+              <ul class="sorting__list list">
+                <li class="list__item"><a href="/travels">Сначала новые</a></li>
+                <li class="list__item"><a href="/travels">Сначала старые</a></li>
+                <li class="list__item"><a href="/travels">Популярные</a></li>
+                <li class="list__item"><a href="/travels">Выбор автора</a></li>
+              </ul>
+            </label>
+          </div>
+
         </div>
 
         <div class="main__content content" data-content-pages="">
@@ -66,35 +71,10 @@
           <a class="pagination__next" href="#"></a>
         </div>
 
-        <button class="main__more primary-button" data-more="">Показать еще</button>
-
       </div>
 
-      <div class="travels-page__secondary secondary">
-        <div class="secandary__filter filter-menu" data-filter-menu>
-
-          <div class="filter-menu__header">
-            <h2 class="filter-menu__title">Путешествия</h2>
-            <button class="filter-menu__close button" data-filter-item>
-              <img src="/img/svg/close.svg" alt="закрыть">
-            </button>
-          </div>
-
-          <div class="filter-menu__filters filters">
-            <h2 class="filters__title">Фильтры</h2>
-            <button class="filters__reset button">Сбросить</button>
-          </div>
-
-          <!--#include virtual="/partials/select/select.html" -->
-          <!--#include virtual="/partials/chips/chips.html" -->
-
-          <div class="secondary__calendar calendar">
-            <h2>Дата публикации</h2>
-            <img src="https://i.imgur.com/b1QErDj.png" alt="пусть будет">
-          </div>
-
-          <button class="filter-menu__apply primary-button">Применить</button>
-        </div>
+      <aside class="travels-page__secondary secondary">
+        <!--#include virtual="/partials/filter.html" -->
         <div class="secondary__opinions opinions">
           <script defer src="/js/index/swiper-opinions.js"></script>
           <h2 class="opinions__title">Мнение</h2>
@@ -130,7 +110,7 @@
           <a class="video__more primary-button" href="#">Плейлисты</a>
         </div>
 
-      </div>
+      </aside>
 
     </div>
 

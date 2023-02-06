@@ -22,13 +22,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Поиск закрываем по клику вне
   document.addEventListener('click', el => {
-    if (!document.querySelector('.header__search').contains(el.target)){
+    if (!document.querySelector('.header__search').contains(el.target)) {
       document.querySelector('.header__search').classList.remove('search_active');
       document.querySelector('.search__result').classList.remove('result_active');
       if (window.screen.availWidth < 1024) {
         document.querySelector('.header__title').classList.remove('visually-hidden');
       };
     };
+
+    if (document.querySelector('[data-close-checkbox]')) {
+      if (!document.querySelector('[data-close-checkbox]').contains(el.target)) {
+        document.querySelector('[data-close-checkbox] input').checked = false;
+      }
+    }
   });
 
   // Поиск закрываем на "Esc"
@@ -39,12 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       document.querySelector('.header__search').classList.remove('search_active');
       document.querySelector('.search__result').classList.remove('result_active');
+
+      if (document.querySelector('[data-close-checkbox]')) {
+        document.querySelector('[data-close-checkbox] input').checked = false;
+      }
     }
   });
 });
 
 const headerHtml = document?.querySelector('.header'),
-      headerHeight = headerHtml.offsetHeight;
+  headerHeight = headerHtml.offsetHeight;
 
 window.onscroll = () => (window.scrollY > headerHeight / 1.5) ? headerHtml.classList.add('header_active') : headerHtml.classList.remove('header_active');
 
