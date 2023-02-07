@@ -47,6 +47,7 @@
     "gulp-typograf": "^4.0.3",
     "gulp-webp": "^4.0.1",
     "gulp-zip": "^5.1.0",
+    "hello-week": "^2.13.0",
     "node-w3c-validator": "^2.0.1",
     "postcss": "^8.4.5",
     "postcss-scss": "^4.0.2",
