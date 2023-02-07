@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="/css/components/search/common.min.css">
+<script defer src="/js/pages.min.js"></script>
+<script defer src="/js/filter-menu.min.js"></script>
+<section class="travels-page" id="travels-page" data-pages="">
+  <div class="travels-page__container container">
+
+    <div class="travels-page__header">
+      <h1>Результаты поиска</h1>
+      <button class="travels-page__filter button" data-filter="">
+        <img class="button__icon" src="/img/svg/filter.svg" alt="фильтры">
+        Фильтры
+      </button>
+    </div>
+
+    <div class="travels-page__wrapper">
+
+      <div class="travels-page__main main">
+
+        <div class="main__top top">
+          <h2 class="top__title">Paris</h2>
+          <ul class="top__tags tags list">
+            <li class="tags__item">Франция</li>
+            <li class="tags__item">Париж</li>
+          </ul>
+
+          <div class="top__sorting sorting" data-close-checkbox>
+            <label class="sorting__select">
+              <input class="visually-hidden" type="checkbox"></input>
+              <span class="sorting__current">Сначала новые</span>
+              <ul class="sorting__list list">
+                <li class="list__item"><a href="/travels">Сначала новые</a></li>
+                <li class="list__item"><a href="/travels">Сначала старые</a></li>
+                <li class="list__item"><a href="/travels">Популярные</a></li>
+                <li class="list__item"><a href="/travels">Выбор автора</a></li>
+              </ul>
+            </label>
+          </div>
+
+        </div>
+
+        <div class="main__content content" data-content-pages="">
+          <!--#include virtual="/partials/search/item.html" -->
+          <!--#include virtual="/partials/search/item.html" -->
+          <!--#include virtual="/partials/search/item.html" -->
+          <!--#include virtual="/partials/search/item.html" -->
+          <!--#include virtual="/partials/search/item.html" -->
+          <!--#include virtual="/partials/search/item.html" -->
+        </div>
+
+        <div class="main__pagination pagination">
+          <a class="pagination__prev pagination__prev_disabled" href="#"></a>
+          <ul class="pagination__list list">
+            <li class="list__item list__item_active"><a href="#">1</a></li>
+            <li class="list__item"><a href="#">2</a></li>
+            <li class="list__item"><a href="#">3</a></li>
+            <li class="list__item"><a href="#">4</a></li>
+            <li class="list__item"><a href="#">...</a></li>
+            <li class="list__item"><a href="#">9</a></li>
+            <li class="list__item"><a href="#">10</a></li>
+          </ul>
+          <a class="pagination__next" href="#"></a>
+        </div>
+
+      </div>
+
+      <aside class="travels-page__secondary secondary" itemscope itemtype="http://schema.org/WPSideBar">
+        <!--#include virtual="/partials/filter.html" -->
+
+        <div class="common__video video">
+          <h2 class="video__title">Видео</h2>
+          <div class="video__items">
+            <!--#include virtual="/partials/index/common/video.html" -->
+            <!--#include virtual="/partials/index/common/video.html" -->
+            <!--#include virtual="/partials/index/common/video.html" -->
+          </div>
+          <a class="video__more primary-button" href="#">Плейлисты</a>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+</section>
