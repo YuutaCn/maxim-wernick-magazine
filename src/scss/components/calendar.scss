@@ -1,0 +1,136 @@
+@import '../mixins';
+
+// .hello-week .week {
+//   color: #42a298;
+//   font-size: 1.2em;
+// }
+
+// .hello-week .day.is-highlight {
+//   background-color: #8fbc8f;
+//   color: #fff;
+// }
+
+// .hello-week .day.is-selected {
+//   background-color: #7fcbc3 !important;
+//   color: #fff !important;
+// }
+
+// .hello-week .day.is-begin-range,
+// .hello-week .day.is-end-range {
+//   background-color: #42a298 !important;
+//   color: #fff !important;
+// }
+
+// .hello-week .day.is-disabled {
+//   cursor: not-allowed;
+//   opacity: .33;
+// }
+
+
+.hello-week {
+  margin-top: #{rem(40)};
+  // max-width: #{rem(412)};
+  margin-left: 0;
+
+  & .navigation {
+    display: flex;
+    flex-direction: row;
+    margin-top: #{rem(20)};
+    margin-bottom: #{rem(10)};
+    padding-bottom: #{rem(14)};
+    border-bottom: solid 1px var(--dark-color-20);
+
+    & .prev,
+    & .next {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: #{rem(9)};
+        height: #{rem(9)};
+        border: solid 2px var(--dark-color);
+        border-width: 2px 2px 0 0;
+      }
+    }
+
+    & .prev {
+      order: 2;
+
+      &::before {
+        transform: rotate(-135deg);
+      }
+    }
+
+    & .next {
+      order: 3;
+
+      &::before {
+        transform: rotate(45deg);
+      }
+    }
+
+    & .period {
+      order: 1;
+      display: flex;
+      text-align: start;
+      font-family: var(--font-inter);
+      font-style: normal;
+      font-weight: 400;
+      font-size: #{rem(16)};
+      line-height: #{rem(19)};
+    }
+  }
+
+  & .week {
+    font-family: var(--font-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: #{rem(12)};
+    line-height: #{rem(15)};
+    text-transform: capitalize;
+    color: var(--dark-color);
+  }
+
+  & .month {
+    margin-top: #{rem(13)};
+    font-family: var(--font-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: #{rem(12)};
+    line-height: #{rem(15)};
+    text-transform: capitalize;
+    color: #6F6F6F;
+  }
+
+  & .week,
+  & .month {
+    row-gap: #{rem(3)};
+
+    & .day {
+      padding: #{rem(5)};
+      margin: 0;
+      transition: border 1s var(--cubic-bezier);
+
+      &.is-selected {
+        background: rgba(49, 49, 49, 0.1);
+        color: var(--dark-color);
+      }
+
+      &.is-begin-range {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+
+      &.is-end-range {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+    }
+  }
+}
