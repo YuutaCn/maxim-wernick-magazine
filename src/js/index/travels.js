@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       el.classList.add('buttons__change_active');
-      
+
       travelsContent.forEach(e => {
-        e.classList.remove('content_active')
+        e.classList.remove('content_active');
       });
 
       travelsContent[i].classList.add('content_active');
